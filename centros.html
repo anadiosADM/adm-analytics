@@ -1,29 +1,151 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>Centros - ADM Analytics</title>
+
+<style>
+
+body{
+font-family:Segoe UI,sans-serif;
+background:#f4f6fa;
+padding:30px;
+margin:0;
+}
+
+h1{
+color:#0f172a;
+margin-bottom:30px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.card h2{
+margin-top:0;
+color:#0b5ed7;
+}
+
+.kpi{
+display:flex;
+justify-content:space-between;
+margin:10px 0;
+padding:8px 0;
+border-bottom:1px solid #eee;
+}
+
+.link{
+display:inline-block;
+margin-top:30px;
+text-decoration:none;
+color:#0b5ed7;
+font-weight:bold;
+}
+
+</style>
+
 </head>
 
-<body style="font-family:Arial;padding:40px;background:#f4f6fa;">
+<body>
 
-<h1>🏪 Centros</h1>
+<h1>🏪 Centros ADM</h1>
 
-<ul>
-<li>ADM PADRON</li>
-<li>ADM CC MILLADOIRO</li>
-<li>ADM GONDOMAR</li>
-<li>ADM NOIA</li>
-<li>ADM BOIRO</li>
-<li>ADM RAMALLOSA</li>
-<li>ADM VIGO URZAIZ</li>
-</ul>
+<div class="grid">
 
-<p>
-index.html
+<div class="card">
+<h2>ADM PADRON</h2>
+
+<div class="kpi">
+<span>Ventas</span>
+<strong>8</strong>
+</div>
+
+<div class="kpi">
+<span>Facturación</span>
+<strong>1.491 €</strong>
+</div>
+
+<div class="kpi">
+<span>BAF</span>
+<strong>1</strong>
+</div>
+
+<div class="kpi">
+<span>Repos</span>
+<strong>1</strong>
+</div>
+
+</div>
+
+<div class="card">
+<h2>ADM GONDOMAR</h2>
+
+<div class="kpi">
+<span>Ventas</span>
+<strong>4</strong>
+</div>
+
+<div class="kpi">
+<span>Facturación</span>
+<strong>877 €</strong>
+</div>
+
+<div class="kpi">
+<span>BAF</span>
+<strong>2</strong>
+</div>
+
+<div class="kpi">
+<span>Repos</span>
+<strong>1</strong>
+</div>
+
+</div>
+
+<div class="card">
+<h2>ADM MILLADOIRO</h2>
+
+<div class="kpi">
+<span>Ventas</span>
+<strong>5</strong>
+</div>
+
+<div class="kpi">
+<span>Facturación</span>
+<strong>1.842 €</strong>
+</div>
+
+<div class="kpi">
+<span>BAF</span>
+<strong>1</strong>
+</div>
+
+<div class="kpi">
+<span>Repos</span>
+<strong>0</strong>
+</div>
+
+</div>
+
+</div>
+
+<a class="link" href="index.html">
 ← Volver al Dashboard
 </a>
-</p>
 
 </body>
+
 </html>
