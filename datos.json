@@ -22,5 +22,23 @@
       "ventas": 4,
       "facturacion": 939
     }
+  ],
+
+  "comerciales": [
+    {
+      "nombre": "Laura Perol Cedrón",
+      "ventas": 4,
+      "facturacion": 1842
+    },
+    {
+      "nombre": "Iván Gómez Rodríguez",
+      "ventas": 3,
+      "facturacion": 1368
+    },
+    {
+      "nombre": "Ana Jiménez Fombona",
+      "ventas": 2,
+      "facturacion": 877
+    }
   ]
 }
