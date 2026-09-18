@@ -231,4 +231,46 @@ Padrón supera objetivo
 <div class="bar"><div class="fill" style="width:43%"></div></div>
 
 <p>Apple</p>
-<div class="bar"><div class="fill"
+<div class="bar"><div class="fill" style="width:31%"></div></div>
+
+<p>Xiaomi</p>
+<div class="bar"><div class="fill" style="width:16%"></div></div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+fetch("datos.json")
+.then(r => r.json())
+.then(data => {
+
+document.getElementById("ventas").innerText =
+data.ventas;
+
+document.getElementById("facturacion").innerText =
+data.facturacion + " €";
+
+document.getElementById("dispositivos").innerText =
+data.dispositivos;
+
+document.getElementById("baf").innerText =
+data.baf;
+
+document.getElementById("repos").innerText =
+data.repos;
+
+document.getElementById("alarmas").innerText =
+data.alarmas;
+
+});
+
+</script>
+
+</body>
+</html>
