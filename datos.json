@@ -1,44 +1,66 @@
 {
-  "ventas": 28,
-  "facturacion": 7197,
-  "dispositivos": 18,
-  "baf": 5,
-  "repos": 4,
-  "alarmas": 1,
+  "empresa": {
+    "baf": {
+      "real": 5,
+      "objetivo": 8
+    },
+    "dispositivos": {
+      "real": 18,
+      "objetivo": 17
+    },
+    "alarmas": {
+      "real": 1,
+      "objetivo": 3
+    },
+    "puntos": {
+      "real": 809,
+      "objetivo": 720
+    }
+  },
+
+  "coordinadoras": [
+    {
+      "nombre": "Bea",
+      "baf": 3,
+      "dispositivos": 10,
+      "puntos": 430
+    },
+    {
+      "nombre": "Mari",
+      "baf": 2,
+      "dispositivos": 8,
+      "puntos": 379
+    }
+  ],
 
   "tiendas": [
     {
       "nombre": "ADM PADRON",
-      "ventas": 8,
-      "facturacion": 1491
+      "dispositivos": 6,
+      "puntos": 170
     },
     {
-      "nombre": "ADM MILLADOIRO",
-      "ventas": 5,
-      "facturacion": 1158
+      "nombre": "ADM CC MILLADOIRO",
+      "dispositivos": 3,
+      "puntos": 159
     },
     {
       "nombre": "ADM GONDOMAR",
-      "ventas": 4,
-      "facturacion": 939
+      "dispositivos": 1,
+      "puntos": 167
     }
   ],
 
-  "comerciales": [
+  "destacados": [
     {
       "nombre": "Laura Perol Cedrón",
-      "ventas": 4,
-      "facturacion": 1842
+      "dispositivos": 4,
+      "puntos": 376
     },
     {
       "nombre": "Iván Gómez Rodríguez",
-      "ventas": 3,
-      "facturacion": 1368
-    },
-    {
-      "nombre": "Ana Jiménez Fombona",
-      "ventas": 2,
-      "facturacion": 877
+      "dispositivos": 2,
+      "puntos": 138
     }
   ]
 }
