@@ -156,3 +156,160 @@ ADM
 
 </div>
 
+<div class="main">
+
+<div class="header">
+<h1>ADM Analytics</h1>
+<div>Seguimiento Comercial</div>
+</div>
+
+<div class="kpis">
+
+<div class="card">
+<h2 id="baf-real">...</h2>
+<p>BAF</p>
+<div class="objetivo" id="baf-objetivo"></div>
+</div>
+
+<div class="card">
+<h2 id="disp-real">...</h2>
+<p>Dispositivos</p>
+<div class="objetivo" id="disp-objetivo"></div>
+</div>
+
+<div class="card">
+<h2 id="alarmas-real">...</h2>
+<p>Alarmas</p>
+<div class="objetivo" id="alarmas-objetivo"></div>
+</div>
+
+<div class="card">
+<h2 id="puntos-real">...</h2>
+<p>Puntos</p>
+<div class="objetivo" id="puntos-objetivo"></div>
+</div>
+
+</div>
+
+<div class="grid">
+
+<div class="panel">
+
+<h3>🎯 Coordinadoras</h3>
+
+<div class="coordinadora">
+<strong>BEA</strong><br>
+BAF: 3<br>
+Dispositivos: 10<br>
+Puntos: 430
+</div>
+
+<div class="coordinadora">
+<strong>MARI</strong><br>
+BAF: 2<br>
+Dispositivos: 8<br>
+Puntos: 379
+</div>
+
+</div>
+
+<div class="panel">
+
+<h3>🚨 Dónde mirar</h3>
+
+<p class="warning">🟡 Alarmas por debajo del objetivo</p>
+
+<br>
+
+<p class="danger">🔴 BAF por debajo del objetivo</p>
+
+<br>
+
+<p class="ok">🟢 Dispositivos cumplido</p>
+
+<br>
+
+<p class="ok">🟢 Puntos cumplido</p>
+
+</div>
+
+</div>
+
+<div class="grid">
+
+<div class="panel">
+
+<h3>⭐ Destacados</h3>
+
+<ul>
+<li>Laura Perol Cedrón</li>
+<li>ADM Padrón</li>
+<li>Bea</li>
+</ul>
+
+</div>
+
+<div class="panel">
+
+<h3>🔍 Método de análisis</h3>
+
+<p>
+Empresa
+<br>
+↓
+<br>
+Coordinadora
+<br>
+↓
+<br>
+Tienda
+<br>
+↓
+<br>
+Vendedor
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+fetch("datos.json")
+.then(r => r.json())
+.then(data => {
+
+document.getElementById("baf-real").innerText =
+data.empresa.baf.real;
+
+document.getElementById("baf-objetivo").innerText =
+"Objetivo: " + data.empresa.baf.objetivo;
+
+document.getElementById("disp-real").innerText =
+data.empresa.dispositivos.real;
+
+document.getElementById("disp-objetivo").innerText =
+"Objetivo: " + data.empresa.dispositivos.objetivo;
+
+document.getElementById("alarmas-real").innerText =
+data.empresa.alarmas.real;
+
+document.getElementById("alarmas-objetivo").innerText =
+"Objetivo: " + data.empresa.alarmas.objetivo;
+
+document.getElementById("puntos-real").innerText =
+data.empresa.puntos.real;
+
+document.getElementById("puntos-objetivo").innerText =
+"Objetivo: " + data.empresa.puntos.objetivo;
+
+});
+
+</script>
+
+</body>
+</html>
