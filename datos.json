@@ -1,0 +1,26 @@
+{
+  "ventas": 28,
+  "facturacion": 7197,
+  "dispositivos": 18,
+  "baf": 5,
+  "repos": 4,
+  "alarmas": 1,
+
+  "tiendas": [
+    {
+      "nombre": "ADM PADRON",
+      "ventas": 8,
+      "facturacion": 1491
+    },
+    {
+      "nombre": "ADM MILLADOIRO",
+      "ventas": 5,
+      "facturacion": 1158
+    },
+    {
+      "nombre": "ADM GONDOMAR",
+      "ventas": 4,
+      "facturacion": 939
+    }
+  ]
+}
