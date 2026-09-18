@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>ADM Analytics</title>
 
 <style>
@@ -31,7 +33,7 @@ padding:30px 20px;
 }
 
 .logo{
-font-size:28px;
+font-size:30px;
 font-weight:bold;
 margin-bottom:40px;
 }
@@ -44,6 +46,7 @@ list-style:none;
 padding:15px;
 margin-bottom:10px;
 border-radius:10px;
+background:#1e293b;
 }
 
 .main{
@@ -54,25 +57,41 @@ padding:30px;
 .header{
 display:flex;
 justify-content:space-between;
+align-items:center;
 margin-bottom:30px;
+}
+
+.header h1{
+color:#0f172a;
 }
 
 .kpis{
 display:grid;
-grid-template-columns:repeat(6,1fr);
-gap:15px;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
 }
 
 .card{
 background:white;
-padding:20px;
+padding:25px;
 border-radius:15px;
 box-shadow:0 2px 10px rgba(0,0,0,.08);
+text-align:center;
 }
 
 .card h2{
-font-size:36px;
+font-size:42px;
 color:#0b5ed7;
+}
+
+.card p{
+margin-top:10px;
+font-weight:bold;
+}
+
+.objetivo{
+margin-top:10px;
+color:#666;
 }
 
 .grid{
@@ -89,30 +108,34 @@ border-radius:15px;
 box-shadow:0 2px 10px rgba(0,0,0,.08);
 }
 
-.bar{
-height:12px;
-background:#e5e7eb;
-border-radius:20px;
-margin:10px 0;
-overflow:hidden;
+.panel h3{
+margin-bottom:20px;
 }
 
-.fill{
-height:100%;
-background:#0b5ed7;
-}
-
-.alert{
-padding:12px;
+.coordinadora{
+padding:15px;
+background:#f8fafc;
 border-radius:10px;
-margin-bottom:12px;
+margin-bottom:10px;
 }
 
-.red{background:#ffe5e5;}
-.yellow{background:#fff5d6;}
-.green{background:#e4ffe8;}
+.ok{
+color:green;
+font-weight:bold;
+}
+
+.warning{
+color:#d97706;
+font-weight:bold;
+}
+
+.danger{
+color:red;
+font-weight:bold;
+}
 
 </style>
+
 </head>
 
 <body>
@@ -121,156 +144,15 @@ margin-bottom:12px;
 
 <div class="sidebar">
 
-<div class="logo">ADM</div>
+<div class="logo">
+ADM
+</div>
 
 <ul class="menu">
 <li>🏠 Dashboard</li>
-<li>centros.html🏪 Centros</a></li>
-<li>comerciales.html👥 Comerciales</a></li>
+<li>🏪 Centros</li>
+<li>👥 Comerciales</li>
 </ul>
 
 </div>
 
-<div class="main">
-
-<div class="header">
-<h1>ADM Analytics</h1>
-<div>Dashboard Comercial</div>
-</div>
-
-<div class="kpis">
-
-<div class="card">
-<h2 id="ventas">...</h2>
-<p>Ventas</p>
-</div>
-
-<div class="card">
-<h2 id="facturacion">...</h2>
-<p>Facturación</p>
-</div>
-
-<div class="card">
-<h2 id="dispositivos">...</h2>
-<p>Dispositivos</p>
-</div>
-
-<div class="card">
-<h2 id="baf">...</h2>
-<p>BAF</p>
-</div>
-
-<div class="card">
-<h2 id="repos">...</h2>
-<p>Repos</p>
-</div>
-
-<div class="card">
-<h2 id="alarmas">...</h2>
-<p>Alarmas</p>
-</div>
-
-</div>
-
-<div class="grid">
-
-<div class="panel">
-
-<h3>🏪 Ranking Tiendas</h3>
-
-<p>ADM PADRON</p>
-<div class="bar"><div class="fill" style="width:95%"></div></div>
-
-<p>ADM MILLADOIRO</p>
-<div class="bar"><div class="fill" style="width:80%"></div></div>
-
-<p>ADM GONDOMAR</p>
-<div class="bar"><div class="fill" style="width:70%"></div></div>
-
-</div>
-
-<div class="panel">
-
-<h3>👥 Top Comerciales</h3>
-
-<ol>
-<li>Laura Perol Cedrón</li>
-<li>Iván Gómez Rodríguez</li>
-<li>Ana Jiménez Fombona</li>
-</ol>
-
-</div>
-
-</div>
-
-<div class="grid">
-
-<div class="panel">
-
-<h3>⚠ Alertas</h3>
-
-<div class="alert red">
-FTTR sin actividad
-</div>
-
-<div class="alert yellow">
-Noia por debajo objetivo
-</div>
-
-<div class="alert green">
-Padrón supera objetivo
-</div>
-
-</div>
-
-<div class="panel">
-
-<h3>📱 Facturación por Marca</h3>
-
-<p>Samsung</p>
-<div class="bar"><div class="fill" style="width:43%"></div></div>
-
-<p>Apple</p>
-<div class="bar"><div class="fill" style="width:31%"></div></div>
-
-<p>Xiaomi</p>
-<div class="bar"><div class="fill" style="width:16%"></div></div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<script>
-
-fetch("datos.json")
-.then(r => r.json())
-.then(data => {
-
-document.getElementById("ventas").innerText =
-data.ventas;
-
-document.getElementById("facturacion").innerText =
-data.facturacion + " €";
-
-document.getElementById("dispositivos").innerText =
-data.dispositivos;
-
-document.getElementById("baf").innerText =
-data.baf;
-
-document.getElementById("repos").innerText =
-data.repos;
-
-document.getElementById("alarmas").innerText =
-data.alarmas;
-
-});
-
-</script>
-
-</body>
-</html>
